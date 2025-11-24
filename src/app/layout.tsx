@@ -3,6 +3,8 @@ import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import type React from "react"; // Import React
 import { cn } from "@/lib/utils";
+import Navbar from "./(site)/Navbar";
+import Footer from "./(site)/Footer";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -10,20 +12,16 @@ const bricolageGrotesque = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "ShipFree",
-  description:
-    "Open Source Alternative to ShipFast - Launch your startup in days Not in weeks",
+  title: "PricePulse",
+  description: "PricePulse - Gestiona tu lista de compras eficientemente",
   keywords: [
     "saas",
     "boilerplate",
-    "open source",
     "free",
-    "open source shipfast",
-    "shipfree",
-    "idee8",
-    "made by idee8",
     "free boilerplate",
     "github",
+    "shoping",
+    "price pulse",
   ],
 };
 
@@ -35,7 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(bricolageGrotesque.className, "antialiased")}>
-        {children}
+        <Navbar />
+        <div className="p-24">{children}</div>
+        <Footer />
       </body>
     </html>
   );
