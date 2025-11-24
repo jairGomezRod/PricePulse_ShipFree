@@ -1,5 +1,3 @@
-import crypto from "crypto";
-
 import { NextResponse, NextRequest } from "next/server";
 import { sendEmail } from "@/lib/mailgun";
 import { config } from "@/config";
